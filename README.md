@@ -1,4 +1,3 @@
-# Projekt-Piskvorky
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -7,13 +6,11 @@
 #define BUF 100
 
 //funkce pro inicializaci hraci desky
-
 void initializeBoard(char board[SIZE][SIZE]) {
     for (int i = 0; i < SIZE; i++)
         for (int j = 0; j < SIZE; j++)
             board[i][j] = ' ';
 }
-
 //funkce pro vypsani hraci desky
 void printBoard(char board[SIZE][SIZE]) {
     printf("\n");
@@ -56,9 +53,7 @@ int checkWin(char board[SIZE][SIZE], char znak) {
                 win = 1;
             }
             if (win == 1) return 1;
-
         }
-
     }
     // sloupce
     for (int j = 0; j < SIZE; ++j) {
@@ -76,9 +71,7 @@ int checkWin(char board[SIZE][SIZE], char znak) {
                 win = 1;
             }
             if (win == 1) return 1;
-
         }
-
     }
     // diagonála TL->BR
     win = 0;
@@ -157,7 +150,6 @@ int main(void) {
     char player1 = 'X';
     char player2 = 'O';
     char current = player1;
-
     printf("Piskvorky \n");
     printf("Hrac 1: '%c', Hrac 2: '%c'\n", player1, player2);
     printf("Pro tah zadejte radek a sloupec (1..%d), napr. '2 3'.\n", SIZE);
